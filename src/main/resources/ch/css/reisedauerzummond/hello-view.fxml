@@ -7,17 +7,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="446.0" prefWidth="498.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="446.0" prefWidth="498.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.css.reisedauerzummond.HelloController">
    <children>
       <Label layoutX="158.0" layoutY="30.0" text="Reisedauer zum Mond berechnen" />
-      <RadioButton layoutX="131.0" layoutY="103.0" mnemonicParsing="false" text="in Tagen" />
-      <RadioButton layoutX="269.0" layoutY="103.0" mnemonicParsing="false" text="in Stunden" />
+      <RadioButton fx:id="radioButtonTage" layoutX="131.0" layoutY="103.0" mnemonicParsing="false" text="in Tagen" />
+      <RadioButton fx:id="radioButtonStunden" layoutX="269.0" layoutY="103.0" mnemonicParsing="false" text="in Stunden" />
       <Label layoutX="62.0" layoutY="205.0" text="Geschwindigkeit in km/h:" />
-      <TextField layoutX="272.0" layoutY="201.0" />
-      <Button layoutX="168.0" layoutY="270.0" mnemonicParsing="false" text="Reisedauer berechnen" />
+      <TextField fx:id="textFieldGeschwindigkeit" layoutX="272.0" layoutY="201.0" />
+      <Button layoutX="168.0" layoutY="270.0" mnemonicParsing="false" onAction="#ButtonLogic" text="Reisedauer berechnen" />
       <Label layoutX="65.0" layoutY="364.0" text="Ausgabe Reisedauer:" />
-      <TextField layoutX="271.0" layoutY="360.0" />
+      <TextField fx:id="textFieldAusgabe" layoutX="271.0" layoutY="360.0" />
       <Line endX="226.70065307617188" endY="-3.814697265625E-6" layoutX="218.0" layoutY="60.0" startX="-167.71795654296875" startY="-3.814697265625E-6" />
       <Line endX="-47.07100296020508" endY="-61.2770881652832" layoutX="96.0" layoutY="121.0" startX="-47.070987701416016" startY="203.06729125976562" />
       <Line endX="72.29867553710938" endY="178.5" layoutX="375.0" layoutY="146.0" startX="70.20062255859375" startY="-85.5" />
