@@ -26,13 +26,14 @@ public class HelloController {
         double resultat = 0.0;
 
         Mondreise mondreise = new Mondreise(speedKmh);
-
-        if (radioButtonTage.isSelected() == true) {
+        System.out.println(radioButtonTage.isSelected());
+        if (radioButtonTage.isSelected()) {
             resultat = mondreise.getTravelDurationDays();
         }
         else {
             resultat = mondreise.getTravelDurationHours();
         }
+        textFieldAusgabe.setText(Double.toString(resultat));
     }
 
     private double convertToDouble(String value) {
